@@ -44,7 +44,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <motion.button
+              <motion.a
                 key={item.label}
                 href={item.href}
                 whileHover={{ scale: 1.1 }}
@@ -53,7 +53,7 @@ const Header = ({ darkMode, setDarkMode }) => {
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-premium-gold to-chai-500 group-hover:w-full transition-all duration-300" />
-              </motion.button>
+              </motion.a>
             ))}
             
             {/* Instagram */}
@@ -91,7 +91,7 @@ const Header = ({ darkMode, setDarkMode }) => {
             >
               <div className="flex flex-col gap-4 py-4">
                 {navItems.map((item, index) => (
-                  <motion.button
+                  <motion.a
                     key={item.label}
                     href={item.href}
                     initial={{ x: -20, opacity: 0 }}
@@ -101,7 +101,7 @@ const Header = ({ darkMode, setDarkMode }) => {
                     className="text-gray-700 dark:text-gray-300 hover:text-chai-600 dark:hover:text-chai-400 font-medium py-2 border-b border-gray-200 dark:border-gray-700"
                   >
                     {item.label}
-                  </motion.button>
+                  </motion.a>
                 ))}
                 <div className="flex items-center justify-between pt-4">
                   <motion.a
