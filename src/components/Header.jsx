@@ -7,10 +7,10 @@ const Header = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Menu', href: '#menu' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home',id: '#home' },
+    { label: 'Menu', id: '#menu' },
+    { label: 'Gallery', id: '#gallery' },
+    { label: 'Contact', id: '#contact' },
   ];
   
 const scrollToSection = (id) => {
