@@ -32,7 +32,7 @@ const Gallery = () => {
 
   return (
     <section id="gallery" className="section-padding bg-gradient-to-b from-white to-amber-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto scroll-mt-40">
+      <div className="max-w-7xl mx-auto ">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

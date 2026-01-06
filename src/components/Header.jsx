@@ -12,7 +12,20 @@ const Header = ({ darkMode, setDarkMode }) => {
     { label: 'Gallery', href: '#gallery' },
     { label: 'Contact', href: '#contact' },
   ];
+  
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (!element) return;
 
+  const headerOffset = 96; // height of your fixed header, adjust if needed
+  const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const offsetPosition = elementPosition - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+};
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -43,18 +56,20 @@ const Header = ({ darkMode, setDarkMode }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.label}
-                href={item.href}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-chai-600 dark:hover:text-chai-400 font-medium transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-premium-gold to-chai-500 group-hover:w-full transition-all duration-300" />
-              </motion.a>
-            ))}
+  {navItems.map((item) => (
+    <motion.a
+      key={item.label}
+      onClick={() => scrollToSection(item.label.toLowerCase())}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="text-gray-700 dark:text-gray-300 hover:text-chai-600 dark:hover:text-chai-400 font-medium transition-colors relative group cursor-pointer"
+    >
+      {item.label}
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-premium-gold to-chai-500 group-hover:w-full transition-all duration-300" />
+    </motion.a>
+  ))}
+
+           
             
             {/* Instagram */}
             <motion.a

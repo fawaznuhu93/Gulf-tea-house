@@ -22,7 +22,7 @@ const Menu = () => {
     });
 
   return (
-    <section id="menu" className="section-padding scroll-mt-40">
+    <section id="menu" className="section-padding ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
