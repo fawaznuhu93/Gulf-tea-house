@@ -33,7 +33,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
