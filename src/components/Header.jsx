@@ -112,7 +112,7 @@ const scrollToSection = (id) => {
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() =>{scrollToSection(item.label.toLowerCase());
+                    onClick={() =>{scrollToSection(item.id);
                   
                     setIsOpen(false);}}
                     className="text-gray-700 dark:text-gray-300 hover:text-chai-600 dark:hover:text-chai-400 font-medium py-2 border-b border-gray-200 dark:border-gray-700"
