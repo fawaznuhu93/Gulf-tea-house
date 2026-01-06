@@ -108,7 +108,7 @@ const scrollToSection = (id) => {
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.label}
-                    href={item.href}
+                    
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
