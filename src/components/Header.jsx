@@ -106,9 +106,9 @@ const scrollToSection = (id) => {
             >
               <div className="flex flex-col gap-4 py-4">
                 {navItems.map((item, index) => (
-                  <motion.button
+                  <motion.a
                     key={item.label}
-                    type="button"
+                    
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
@@ -120,7 +120,7 @@ const scrollToSection = (id) => {
                     className="text-gray-700 dark:text-gray-300 hover:text-chai-600 dark:hover:text-chai-400 font-medium py-2 border-b border-gray-200 dark:border-gray-700"
                   >
                     {item.label}
-                  </motion.button>
+                  </motion.a>
                 ))}
                 <div className="flex items-center justify-between pt-4">
                   <motion.a
