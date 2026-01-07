@@ -4,7 +4,7 @@ import { Star, Clock, MapPin, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="scroll-mt-24">
+    <section id="home" className="pt-24 md:pt-28 scroll-mt-24">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 via-amber-800/80 to-chai-900/90" />
